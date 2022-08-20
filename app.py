@@ -4,8 +4,8 @@ from flask import Flask, request
 from flask_restx import Api, Resource
 
 
-from models import Movie, Genre, Director
-from schemas import movies_schema, movie_schema
+from models import Movie, Director, Genre
+from schemas import movies_schema, movie_schema, director_schema, directors_schema, genre_schema, genres_schema
 from setup_db import db
 
 
@@ -24,6 +24,7 @@ db.init_app(app)
 api = Api(app)
 movie_ns = api.namespace('movies')
 director_ns = api.namespace('directors')
+genre_ns = api.namespace('genre')
 
 
 
@@ -40,7 +41,7 @@ class MoviesView(Resource):
         if director_id:
             movie_with_genre_and_director = movie_with_genre_and_director.filter(Movie.director_id == director_id)
         if genre_id:
-            movie_with_genre_and_director = movie_with_genre_and_director.filter(Movie.genre_id == director_id)
+            movie_with_genre_and_director = movie_with_genre_and_director.filter(Movie.genre_id == genre_id)
         all_movies = movie_with_genre_and_director.all()
 
         return movies_schema.dump(all_movies), 200
@@ -51,6 +52,41 @@ class MoviesView(Resource):
         with db.session.begin():
             db.session.add(new_movie)
         return f"Объект с id {new_movie.id} создан!", 201
+
+
+
+@director_ns.route("/")
+class DirectorsView(Resource):
+    def get(self):
+        all_directors = db.session.query(Director).all()
+        return directors_schema.dump(all_directors), 200
+
+@director_ns.route("/<int:director_id>")
+class DirectorView(Resource):
+    def get(self, director_id: int):
+        director = db.session.query(Director).filter(Director.id == director_id).one()
+        if director:
+            return director_schema.dump(director), 200
+        return "Такого директора не существует", 404
+
+
+
+
+@genre_ns.route("/")
+class GenresView(Resource):
+    def get(self):
+        all_genres = db.session.query(Genre).all()
+        return genres_schema.dump(all_genres), 200
+
+@genre_ns.route("/<int:genre_id>")
+class GenreView(Resource):
+    def get(self, genre_id: int):
+        genre = db.session.query(Genre).filter(Genre.id == genre_id).one()
+        if genre:
+            return genre_schema.dump(genre), 200
+        return "Такого жанра не существует", 404
+
+
 
 
 
@@ -114,6 +150,8 @@ class MovieView(Resource):
         db.session.delete(movie)
         db.session.commit()
         return f"Объект с id {movie.id} удален!", 204
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

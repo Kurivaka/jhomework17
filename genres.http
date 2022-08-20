@@ -12,7 +12,7 @@ Accept: application/json
 
 ###
 
-GET http://localhost:5000/genres/1
+GET http://localhost:5000/genre/1
 Accept: application/json
 
 ###

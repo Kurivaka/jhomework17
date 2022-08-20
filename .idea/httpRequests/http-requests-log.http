@@ -1,0 +1,383 @@
+GET http://localhost:5000/genre/1
+Accept: application/json
+
+<> 2022-08-21T002520.200.json
+
+###
+
+GET http://localhost:5000/genres/1
+Accept: application/json
+
+<> 2022-08-21T002445.404.html
+
+###
+
+GET http://localhost:5000/genres/1
+Accept: application/json
+
+<> 2022-08-21T002443.404.html
+
+###
+
+GET http://localhost:5000/genres/1
+Accept: application/json
+
+<> 2022-08-21T002230.404.html
+
+###
+
+GET http://localhost:5000/genres/1
+Accept: application/json
+
+<> 2022-08-21T002224.404.html
+
+###
+
+GET http://localhost:5000/genres/1
+Accept: application/json
+
+<> 2022-08-21T002212.404.html
+
+###
+
+GET http://localhost:5000/genres/1
+Accept: application/json
+
+<> 2022-08-21T002141.404.html
+
+###
+
+GET http://localhost:5000/directors/4
+Accept: application/json
+
+<> 2022-08-21T001913.200.json
+
+###
+
+GET http://localhost:5000/directors/4
+Accept: application/json
+
+<> 2022-08-21T001821.500.html
+
+###
+
+GET http://localhost:5000/directors/4
+Accept: application/json
+
+<> 2022-08-21T001703.500.html
+
+###
+
+GET http://localhost:5000/directors/4
+Accept: application/json
+
+<> 2022-08-21T001607.500.html
+
+###
+
+GET http://localhost:5000/directors/43333
+Accept: application/json
+
+<> 2022-08-21T001552.500.html
+
+###
+
+GET http://localhost:5000/directors/43333
+Accept: application/json
+
+<> 2022-08-21T001551.500.html
+
+###
+
+GET http://localhost:5000/directors/43333
+Accept: application/json
+
+<> 2022-08-21T001548.500.html
+
+###
+
+GET http://localhost:5000/genres/
+Accept: application/json
+
+<> 2022-08-21T000440.404.html
+
+###
+
+GET http://localhost:5000/genres/
+Accept: application/json
+
+<> 2022-08-21T000434.404.html
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-20T235929.200.json
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-20T235242.404.html
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-20T234654.404.html
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-20T234645.404.html
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-20T234526.404.html
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-20T230652.404.html
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-19T224502.404.html
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-19T224004.404.html
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-19T223900.404.html
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-19T223716.404.html
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-19T223436.404.html
+
+###
+
+GET http://localhost:5000/directors/
+Accept: application/json
+
+<> 2022-08-19T223335.404.html
+
+###
+
+GET http://localhost:5000/genres/
+Accept: application/json
+
+<> 2022-08-19T221758.404.html
+
+###
+
+POST http://localhost:5000/genres/
+Content-Type: application/json
+
+{
+  "name": "superka"
+}
+
+<> 2022-08-19T221038.404.html
+
+###
+
+POST http://localhost:5000/genres/
+Content-Type: application/json
+
+{
+  "name": "superka"
+}
+
+###
+
+GET http://localhost:5000/movies/
+Accept: application/json
+
+<> 2022-08-18T134602.200.json
+
+###
+
+GET http://localhost:5000/movies/
+Accept: application/json
+
+<> 2022-08-18T134137.500.html
+
+###
+
+GET http://localhost:5000/movies/
+Accept: application/json
+
+<> 2022-08-18T134128.500.html
+
+###
+
+GET http://localhost:5000/movies/?genre_id=4&director_id=1
+Accept: application/json
+
+<> 2022-08-18T131237.200.json
+
+###
+
+GET http://localhost:5000/movies/?genre_id=4&director_id=2
+Accept: application/json
+
+<> 2022-08-18T131231.200.json
+
+###
+
+GET http://localhost:5000/movies/?genre_id=1&director_id=2
+Accept: application/json
+
+<> 2022-08-18T131220.200.json
+
+###
+
+GET http://localhost:5000/movies/?genre_id=4&director_id=2
+Accept: application/json
+
+<> 2022-08-18T131210.200.json
+
+###
+
+GET http://localhost:5000/movies/?director_id=2
+Accept: application/json
+
+<> 2022-08-18T131151.200.json
+
+###
+
+GET http://localhost:5000/movies/?director_id=2
+Accept: application/json
+
+<> 2022-08-18T130625.200.json
+
+###
+
+GET http://localhost:5000/movies/?director_id=1
+Accept: application/json
+
+<> 2022-08-18T130604.200.json
+
+###
+
+GET http://localhost:5000/movies/1
+Accept: application/json
+
+<> 2022-08-18T130124.404.json
+
+###
+
+PUT http://localhost:5000/movies/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "GOVNO",
+  "description": "description",
+  "trailer": "trailer",
+  "year": 1222,
+  "rating": 1,
+  "genre_id": 1,
+  "director_id": 1
+}
+
+<> 2022-08-18T130120.404.json
+
+###
+
+DELETE http://localhost:5000/movies/1
+Accept: application/json
+
+###
+
+GET http://localhost:5000/movies/1
+Accept: application/json
+
+<> 2022-08-18T130112.200.json
+
+###
+
+GET http://localhost:5000/movies/1
+Accept: application/json
+
+<> 2022-08-18T130109.200.json
+
+###
+
+PUT http://localhost:5000/movies/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "GOVNO",
+  "description": "description",
+  "trailer": "trailer",
+  "year": 1222,
+  "rating": 1,
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+PUT http://localhost:5000/movies/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "GOVNO",
+  "description": "description",
+  "trailer": "trailer",
+  "year": 1222,
+  "rating": 1,
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+GET http://localhost:5000/movies/1
+Accept: application/json
+
+<> 2022-08-18T130057.200.json
+
+###
+
+DELETE http://localhost:5000/movies/1
+Accept: application/json
+
+<> 2022-08-18T125655.404.json
+
+###
+
